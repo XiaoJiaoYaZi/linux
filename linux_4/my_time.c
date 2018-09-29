@@ -38,6 +38,19 @@ namespace my_time
         printf("asctime the time:%s\n",asctime(tm_ptr));
         printf("ctime the time:%s\n",ctime(&the_time));
 
+
+/*
+ *  %a  z
+ *
+*/
+        char tm_buf[128];
+        strftime(tm_buf,sizeof (tm_buf),"%Y %m %d %I:%M:%S %P",tm_ptr);
+        printf("strftime :  %s\n",tm_buf);
+
+        char *result;
+        result = strptime(tm_buf,"",tm_ptr);
+        printf("strptime :  %s\n",result);
+
     }
 }
 
