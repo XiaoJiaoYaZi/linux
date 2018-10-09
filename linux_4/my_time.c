@@ -10,6 +10,7 @@
 #include<limits>
 #include<sys/time.h>
 #include<math.h>
+#include<iostream>
 using namespace std;
 namespace my_time
 {
